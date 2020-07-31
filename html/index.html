@@ -6,8 +6,25 @@
     <title>AM | PM Toggle</title>
 
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
-<body>
-    <input type="checkbox"></input>
+<body id="body">
+    <input type="checkbox" id="checkbox"></input>
+
+    <script>
+        const checkBox = document.getElementById('checkbox');
+        const body = document.getElementById('body');
+
+        function changeBodyClass() {
+            if (body.className === '') {
+            body.classList.add('checked');
+            } else {
+                body.classList.remove('checked');
+            }
+        }
+
+        checkBox.addEventListener('change', changeBodyClass);
+    
+
+    </script>
 </body>
-</html>
